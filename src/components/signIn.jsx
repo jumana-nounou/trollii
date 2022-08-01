@@ -15,9 +15,9 @@ import { useNavigate } from "react-router-dom";
 const SignIn = () => {
     const navigate = useNavigate();
     const theme = useTheme();
-    const [email,setEmail]=useState(false);
-    const [password,setPassword]=useState(false);
-    const [remember,setRemember]=useState(false);
+   // const [email,setEmail]=useState(false);
+   // const [password,setPassword]=useState(false);
+   // const [remember,setRemember]=useState(false);
 
     
     
