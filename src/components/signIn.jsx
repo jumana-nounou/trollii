@@ -8,6 +8,10 @@ import {
   LinearProgress,
   useMediaQuery,
   useTheme,
+  TextField,
+  Visibility,
+  VisibilityOff,
+  InputAdornment
 } from "@mui/material";
 //import AddBoxIcon from "@mui/icons-material/AddBox";
 //import ReactPlayer from "react-player";
@@ -31,7 +35,10 @@ const SignIn = () => {
       <div className="container">
       <h1 style={{color:"black"}}>Sign in to your account</h1>
     
-
+      <TextField id="outlined-basic" label="Email" variant="outlined"/>
+      <br/><br/>
+      <TextField id="outlined-basic" label="Password" variant="outlined" />
+      <br/><br/>
 
 
       </div>
