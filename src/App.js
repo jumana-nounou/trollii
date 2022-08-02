@@ -11,7 +11,6 @@ function App() {
       <Routes>
         <Route path="/" exact element={<Home />} />
         <Route path="/signIn" exact element={<SignIn />} />
-        {/* <Route path="/all" exact element={<All />} /> */}
       </Routes>
     </>
   );
