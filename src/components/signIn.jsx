@@ -13,6 +13,12 @@ import {
   InputLabel,
   OutlinedInput,
   FormControl,
+  FormGroup,
+  Checkbox,
+  FormControlLabel,
+  Link,
+  Typography
+
 
 } from "@mui/material";
 
@@ -99,6 +105,53 @@ const SignIn = () => {
       style={{width:"91.11%",
     height:"10.375%"}}/>
     </div>
+<div style={{
+    position:"absolute",
+    width:"91.11%",
+    height:"3%",
+    top:387,
+    left:16,
+  }}>
+   <FormControlLabel control={<Checkbox defaultChecked />} label="Remember Me" />
+   <Link href="#">Forgot Password</Link>
+
+</div>
+<div>
+<Button
+                  variant="contained"
+                  style={{
+                    margin:0,
+                    top:435,
+                    width:"91.11%",
+                    height:"6%",
+                    position:"absolute",
+                    left:16,
+                    filter: "drop-shadow(0px 4px 8px rgba(103, 103, 103, 0.25))"
+                  }}
+                  onClick={() => navigate("/Homepage")}
+                >
+                  Sign IN
+                </Button>
+</div>
+<div style={{
+          position: "absolute",
+          width: "62.5%",
+          height: "12%",
+          left:171,
+          top: 511,
+          fontFamily: 'Poppins',
+            fontStyle: "Medium",
+            fontWeight: 400,
+            fontSize:60,
+            lineHeight: "165%",
+            letterSpacing: -0.3,
+          }}>
+          <Typography variant="h6" display="block" gutterBottom>
+        or
+      </Typography>
+          </div>
+
+
   </div>
    
 
