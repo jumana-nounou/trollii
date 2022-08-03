@@ -8,37 +8,26 @@ import {
   LinearProgress,
   useMediaQuery,
   useTheme,
-  TextField,
-  InputAdornment,
-  InputLabel,
-  OutlinedInput,
-  FormControl,
-  FormGroup,
+  Link,
+  Typography,
   Checkbox,
   FormControlLabel,
-  Link,
-  Typography
-
-
+  TextField
 } from "@mui/material";
-
+//import AddBoxIcon from "@mui/icons-material/AddBox";
+//import ReactPlayer from "react-player";
 import { useNavigate } from "react-router-dom";
-
-
-const SignIn = () => {
+const CreateAccount = () => {
     const navigate = useNavigate();
     const theme = useTheme();
-    
-    
+    const [createAccount, setcreateAccount] = useState(0);
+
     const isMD = useMediaQuery(theme.breakpoints.down("md"));
-   
-  
-
-
-    return (
+    return  (
       <>
       {(isMD && (
-        <>
+          <>
+            {createAccount === 0 && (
          <div>
          <div className="skipBtn" style={{
                   position:"absolute",
@@ -49,8 +38,7 @@ const SignIn = () => {
                }}> 
                <Button
                  style={{
-                  color:"707070",
-                  filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
+                    filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
                  }}
                  variant="text"
                  onClick={() => navigate("/Homepage")}>
@@ -61,21 +49,23 @@ const SignIn = () => {
 
           <div style={{
           position: "absolute",
-          width: "62.5%",
+          width: "50.8%",
           height: "12%",
           left:16,
           top: 53,
+          margin:0,
           fontFamily: 'Poppins',
             fontStyle: "Medium",
             fontWeight: 400,
-            fontSize:20,
+            fontSize:19,
             lineHeight: "165%",
             letterSpacing: -0.3,
           }}>
           <h1 style={{
+            
             color:"black"
             }}>
-              Sign in to your account</h1>
+              Create new account</h1>
           </div>
      
 
@@ -86,36 +76,51 @@ const SignIn = () => {
     width:"91.11%",
     height:"10.375%",
     left:16,
-    top:173,
-    margin:0
+    top:173
   }}>
     <Typography style={{color:"gray"}}>Email</Typography>
   <TextField id="outlined-basic" variant="outlined" style={{width:"91.11%",
     height:"10.375%"}}/>
   </div>
+
+
   <div className="password"
    style={{
     position:"absolute",
     width:"91.11%",
     height:"10.375%",
-    top:300,
+    top:280,
     left:16,
   }}>
           
-      <Typography style={{color:"gray"}}>Password</Typography>
+          <Typography style={{color:"gray"}}>Password</Typography> 
       <TextField id="outlined-basic" variant="outlined" 
       style={{width:"91.11%",
     height:"10.375%"}}/>
     </div>
-<div style={{
+
+
+    <div className="confirmPassword"style={{
     position:"absolute",
     width:"91.11%",
     height:"3%",
     top:387,
     left:16,
   }}>
+     <Typography style={{color:"gray"}}>Confirm password</Typography> 
+      <TextField id="outlined-basic" variant="outlined" 
+      style={{width:"91.11%",
+    height:"10.375%"}}/>
+    </div>
+
+    <div className="rememberMe" style={{
+    position:"absolute",
+    width:"91.11%",
+    height:"3%",
+    top:494,
+    left:16,
+  }}>
    <FormControlLabel control={<Checkbox defaultChecked />} label="Remember Me" />
-   <Link href="#">Forgot Password</Link>
 
 </div>
 <div>
@@ -123,46 +128,41 @@ const SignIn = () => {
                   variant="contained"
                   style={{
                     margin:0,
-                    top:435,
+                    top:542,
                     width:"91.11%",
                     height:"6%",
                     position:"absolute",
                     left:16,
                     filter: "drop-shadow(0px 4px 8px rgba(103, 103, 103, 0.25))"
                   }}
-                  onClick={() => navigate("/Homepage")}
+                  onClick={() => {
+                    setcreateAccount(1);
+                  }}
                 >
-                  Sign IN
+                  Create Account
                 </Button>
 </div>
-<div style={{
-          position: "absolute",
-          width: "62.5%",
-          height: "12%",
-          left:171,
-          top: 511,
-          fontFamily: 'Poppins',
-            fontStyle: "Medium",
-            fontWeight: 400,
-            fontSize:60,
-            lineHeight: "165%",
-            letterSpacing: -0.3,
-          }}>
-          <Typography style={{color:"gray"}} variant="h6" display="block" gutterBottom>
-        or
-      </Typography>
-          </div>
-    <div className="icons" 
+
+    <div className="createwith3rdparty" 
     style=
     {{
     position:"absolute",
-    top:563,
-    left:55,
-    right:55,
+    top:622,
+    left:50,
+    right:50,
+    margin:0,
+    width:"72.7%",
+    height:"18%",
+    alignItems:"center"
     }}>
+       <Typography style={{textAlign:"center"
+       }} variant="h6" display="block" gutterBottom>
+        or
+      </Typography>
+      <div>
       <a href='#'><img src='icons/Facebook.png'style={{
         width:"20.7%",
-        height:"100%",
+        height:"50%",
         
       }} /></a>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -175,9 +175,11 @@ const SignIn = () => {
         width:"20.7%",
         height:"100%",
       }} /></a>
+      </div>
+      
 </div>
   </div>
-   <div style={{
+   <div className="goTocreateAccount"style={{
           position: "absolute",
           width: "77.5%",
           height: "3%",
@@ -190,8 +192,8 @@ const SignIn = () => {
             lineHeight: "165%",
             letterSpacing: -0.3,
           }}>
- <Typography style={{color:"gray"}}variant="subtitle" display="block" gutterBottom>
-        Don't have an account? <Link style={{color:"black"}} href="/createAccount">Create one</Link>
+ <Typography variant="subtitle" display="block" gutterBottom>
+        Don't have an account? <Link href="/register">Create one</Link>
 
       </Typography>
    </div>
@@ -200,12 +202,15 @@ const SignIn = () => {
       </div> 
             
           
-          
-        </>
-      )) || <>//if desktop</>}
-
-      </>
-    );
-
+            )}
+             {createAccount === 1 && (
+              <div>
+                
+              </div>
+         )}
+         </>
+       )) || <>//if desktop</>}
+     </>
+   );
 };
-export default SignIn;
+export default CreateAccount;
