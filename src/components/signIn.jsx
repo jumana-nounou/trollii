@@ -36,7 +36,19 @@ const SignIn = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+
+  const onSubmit = async (data) => {
+    //setLoading(true)
+    try {
+      //data to backend to authenticate sign in
+      //then redirect to homepage
+    } catch (error) {
+      //if error snackbar
+    }
+    //  navigate("/Homepage")
+
+    //setLoading(false)
+  };
 
   return (
     <>
@@ -113,9 +125,9 @@ const SignIn = () => {
                       id="outlined-basic"
                       variant="outlined"
                       style={{ width: "100%", height: "10.375%" }}
-                      {...register("email", { required: "required" })}
-                    ></TextField>
-                    <div />
+                      {...register("email", { required: true })}
+                    />
+
                     <br />
 
                     <div
@@ -131,6 +143,7 @@ const SignIn = () => {
                         id="outlined-basic"
                         variant="outlined"
                         style={{ width: "100%", height: "10.375%" }}
+                        {...register("password", { required: true })}
                       />
                     </div>
 
@@ -168,75 +181,74 @@ const SignIn = () => {
                             "drop-shadow(0px 4px 8px rgba(103, 103, 103, 0.25))",
                         }}
                         onSubmit={handleSubmit(onSubmit)}
-                        onClick={() => navigate("/Homepage")}
                       >
                         Sign IN
                       </Button>
                     </div>
-
-                    <div
-                      class="or"
-                      style={{
-                        position: "absolute",
-                        width: "62.5%",
-                        height: "12%",
-                        left: 171,
-                        top: 320,
-                        fontFamily: "Poppins",
-                        fontStyle: "Medium",
-                        fontWeight: 400,
-                        fontSize: 60,
-                        lineHeight: "165%",
-                        letterSpacing: -0.3,
-                      }}
-                    >
-                      <Typography
-                        style={{ color: "gray" }}
-                        variant="h6"
-                        display="block"
-                        gutterBottom
-                      >
-                        or
-                      </Typography>
-                    </div>
-
-                    <div
-                      className="signInwith3rdparty"
-                      style={{
-                        position: "absolute",
-                        top: 393,
-                        left: 50,
-                        right: 25,
-                      }}
-                    >
-                      <a href="#">
-                        <img
-                          src="icons/Facebook.png"
-                          style={{
-                            width: "20.7%",
-                            height: "100%",
-                          }}
-                        />
-                      </a>
-                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                      <a href="#">
-                        <img
-                          src="icons/google.png"
-                          style={{ width: "20.7%", height: "100%" }}
-                        />
-                      </a>
-                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                      <a href="#">
-                        <img
-                          src="icons/apple.png"
-                          style={{
-                            width: "20.7%",
-                            height: "100%",
-                          }}
-                        />
-                      </a>
-                    </div>
                   </form>
+
+                  <div
+                    className="or"
+                    style={{
+                      position: "absolute",
+                      width: "62.5%",
+                      height: "12%",
+                      left: 171,
+                      top: 320,
+                      fontFamily: "Poppins",
+                      fontStyle: "Medium",
+                      fontWeight: 400,
+                      fontSize: 60,
+                      lineHeight: "165%",
+                      letterSpacing: -0.3,
+                    }}
+                  >
+                    <Typography
+                      style={{ color: "gray" }}
+                      variant="h6"
+                      display="block"
+                      gutterBottom
+                    >
+                      or
+                    </Typography>
+                  </div>
+
+                  <div
+                    className="signInwith3rdparty"
+                    style={{
+                      position: "absolute",
+                      top: 393,
+                      left: 50,
+                      right: 25,
+                    }}
+                  >
+                    <a href="#">
+                      <img
+                        src="icons/Facebook.png"
+                        style={{
+                          width: "20.7%",
+                          height: "100%",
+                        }}
+                      />
+                    </a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="#">
+                      <img
+                        src="icons/google.png"
+                        style={{ width: "20.7%", height: "100%" }}
+                      />
+                    </a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="#">
+                      <img
+                        src="icons/apple.png"
+                        style={{
+                          width: "20.7%",
+                          height: "100%",
+                        }}
+                      />
+                    </a>
+                  </div>
                 </div>
               </Container>
             </div>
