@@ -19,8 +19,10 @@ import {
   Link,
   Typography
 
-
 } from "@mui/material";
+import React from 'react';
+
+import { useForm } from "react-hook-form";
 
 import { useNavigate } from "react-router-dom";
 
@@ -31,7 +33,8 @@ const SignIn = () => {
     
     
     const isMD = useMediaQuery(theme.breakpoints.down("md"));
-   
+    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const onSubmit = (data) => console.log(data);
   
 
 
@@ -91,7 +94,15 @@ const SignIn = () => {
   }}>
     <Typography style={{color:"gray"}}>Email</Typography>
   <TextField id="outlined-basic" variant="outlined" style={{width:"91.11%",
-    height:"10.375%"}}/>
+    height:"10.375%"}}>
+      
+    </TextField>
+  <form
+
+ onSubmit={handleSubmit(onSubmit)}>
+      <input {...register("email")} />
+      <input type="submit" />
+    </form>
   </div>
   <div className="password"
    style={{
