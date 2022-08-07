@@ -83,8 +83,9 @@ const Home = () => {
                       fontFamily: "'Poppins', sans-serif",
                       fontWeight:400,
                       fontStyle:"normal",
-                      fontSize:17
-                    
+                      fontSize:17,
+                      textTransform:"none"
+
                   }}
                   onClick={() => {
                     setBoardingScreen(2);
@@ -120,7 +121,9 @@ const Home = () => {
                     fontWeight:400,
                     fontStyle:"normal",
                     fontSize:16,
-                    letterSpacing:-0.3
+                    letterSpacing:-0.3,
+                    textTransform:"lowercase"
+
                   }}
                   variant="text"
                   onClick={() => navigate("/signIn")}
@@ -204,7 +207,9 @@ const Home = () => {
                       fontWeight:500,
                       fontStyle:"normal",
                       fontSize:16,
-                      letterSpacing:-0.3
+                      letterSpacing:-0.3,
+                      textTransform:"none"
+
                   }}
                   onClick={() => {
                     setBoardingScreen(3);
@@ -241,7 +246,9 @@ const Home = () => {
                     fontWeight:400,
                     fontStyle:"normal",
                     fontSize:16,
-                    letterSpacing:-0.3
+                    letterSpacing:-0.3,
+                    textTransform:"lowercase"
+
                   }}
                   variant="text"
                   onClick={() => navigate("/signIn")}
@@ -328,7 +335,9 @@ const Home = () => {
                       fontWeight:500,
                       fontStyle:"normal",
                       fontSize:16,
-                      letterSpacing:-0.3
+                      letterSpacing:-0.3,
+                      textTransform:"none"
+
                   }}
                   onClick={() => {
                     setBoardingScreen(4);
@@ -417,11 +426,12 @@ const Home = () => {
                       fontWeight:500,
                       fontStyle:"normal",
                       fontSize:16,
-                      letterSpacing:-0.3
+                      letterSpacing:-0.3,
+                      textTransform:"none"
                   }}
                   onClick={() => navigate("/signIn")}
                 >
-                  Sign IN
+                  Sign in
                 </Button>
               </div>
             </div>
