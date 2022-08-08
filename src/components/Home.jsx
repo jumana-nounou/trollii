@@ -24,6 +24,7 @@ const Home = () => {
         <>
           {boardingScreen === 1 && (
             <div
+              className="background"
               style={{
                 backgroundSize: "cover",
                 width: "100%",
@@ -35,40 +36,49 @@ const Home = () => {
                 backgroundImage: "url('./imgs/home.jpg')",
               }}
             >
-              <div>
-                <div
+              <div
+                style={{
+                  margin: 0,
+                  top: 560,
+                  width: "90.88%",
+                  height: "16%",
+                  position: "absolute",
+                  left: 16,
+                }}
+              >
+                <Typography
+                  variant="h1"
                   style={{
-                    margin: 0,
-                    top: 560,
-                    width: "80%",
-                    height: "90%",
-                    position: "absolute",
-                    left: 16,
+                    color: "white",
+                    fontWeight: 600,
+                    fontFamily: "'Poppins', sans-serif",
+                    fontSize: 32,
+                    letterSpacing: -0.3,
+                    lineHeight: "200%",
+                    fontStyle: "normal",
+                    bottom: 192,
                   }}
                 >
-                  <h1
-                    style={{
-                      color: "white",
-                      fontWeight: "bold",
-                      fontFamily: "'Poppins', sans-serif",
-                    }}
-                  >
-                    Up for a travel ?
-                  </h1>
-                  <Typography
-                    variant="subtitle1"
-                    style={{
-                      color: "white",
-                      fontFamily: "'Poppins', sans-serif",
-                      fontWeight: 400,
-                      fontStyle: "normal",
-                      fontSize: 17,
-                    }}
-                  >
-                    Use Trollii to search for the cheapest hotel deal for all
-                    major destinations around the world.
-                  </Typography>
-                </div>
+                  Up for a travel ?
+                </Typography>
+                <Typography
+                  variant="subtitle1"
+                  style={{
+                    color: "white",
+                    fontFamily: "'Poppins', sans-serif",
+                    fontWeight: 400,
+                    fontStyle: "normal",
+                    fontSize: 16,
+                    letterSpacing: -0.3,
+                    lineHeight: "100%",
+                    top: 616,
+                  }}
+                >
+                  Use Trollii to search for the cheapest hotel deal for all
+                  major destinations around the world.
+                </Typography>
+              </div>
+              <div>
                 <Button
                   variant="contained"
                   style={{
@@ -147,6 +157,7 @@ const Home = () => {
               </div>
 
               <div
+                className="Info2"
                 style={{
                   margin: 0,
                   top: 526,
@@ -190,6 +201,50 @@ const Home = () => {
                   many rooms you want !
                 </h4>
               </div>
+              <div
+                className="stepper1"
+                style={{
+                  position: "absolute",
+                  top: 688,
+                  bottom: 112,
+                  left: 114,
+                  right: 155,
+                  width: "36.388%",
+                }}
+              >
+                <svg
+                  width="131"
+                  height="3"
+                  viewBox="0 0 131 3"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <line
+                    y1="1.5"
+                    x2="35"
+                    y2="1.5"
+                    stroke="black"
+                    stroke-width="3"
+                  />
+                  <line
+                    x1="49"
+                    y1="1.5"
+                    x2="84"
+                    y2="1.5"
+                    stroke="#E1E1E1"
+                    stroke-width="3"
+                  />
+                  <line
+                    x1="96"
+                    y1="1.5"
+                    x2="131"
+                    y2="1.5"
+                    stroke="#E1E1E1"
+                    stroke-width="3"
+                  />
+                </svg>
+              </div>
+
               <div>
                 <Button
                   variant="contained"
