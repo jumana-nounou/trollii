@@ -22,6 +22,8 @@ import {
   Icon,
 } from "@mui/material";
 import React from "react";
+import { CheckBoxFill } from "akar-icons";
+
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { border, fontSize } from "@mui/system";
@@ -200,41 +202,48 @@ const SignIn = () => {
                       height: "3%",
                       top: 387,
                       left: 16,
+                      right: 16,
                       width: "91.11%",
                     }}
                   >
                     <FormControlLabel
                       control={
-                        <Checkbox
-                          style={{
-                            height: "3%",
-
-                            width: "91.11%",
-                          }}
-                          defaultChecked
-                        />
+                        <CheckBoxFill size={36} color={"#1F90D0"} width={46} />
                       }
-                      label="remember me"
                       style={{
-                        borderRadius: 8,
-                        fontFamily: "'Poppins', sans-serif",
-                        fontStyle: "normal",
-                        fontSize: 17,
-                        textTransform: "none",
+                        position: "absolute",
+                        width: "45.11%",
+                        left: 8,
+                        right: 8,
                       }}
+                      label={
+                        <Typography
+                          style={{
+                            fontFamily: "'Poppins', sans-serif",
+                            fontStyle: "normal",
+                            fontSize: 16,
+                            letterSpacing: -0.3,
+                            lineHeight: "100%",
+                            width: "150%",
+                          }}
+                        >
+                          remember me
+                        </Typography>
+                      }
                     />
                     <Link
                       style={{
-                        left: 206,
-                        top: 387,
+                        position: "absolute",
+                        right: 10,
+                        top: 4,
                         color: "#1F90D0",
                         fontFamily: "'Poppins', sans-serif",
                         fontWeight: 400,
                         fontStyle: "normal",
                         fontSize: 16,
-                        textAlign: "left",
+                        textAlign: "right",
                         textDecorationLine: "underline",
-                        lineHeight: "100%",
+                        lineHeight: "160%",
                       }}
                       href="#"
                     >
@@ -293,90 +302,102 @@ const SignIn = () => {
                     or
                   </Typography>
                 </div>
-
-                <div
-                  className="signInwith3rdparty"
+              </Container>
+              <div className="signInwith3rdparty">
+                <Grid
+                  container
+                  spacing={0.5}
+                  columnSpacing={-1}
                   style={{
+                    width: "66.67%",
+                    height: "6%",
                     position: "absolute",
                     left: 59,
                     right: 61,
-                    bottom: 189,
+                    bottom: 180,
+                    top: 563,
                   }}
                 >
                   <Grid
+                    item
+                    xs={4}
+                    md={4}
                     container
-                    spacing={0.5}
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      objectFit: "fill",
-                    }}
+                    direction="row"
+                    justifyContent="center"
+                    alignItems="center"
                   >
-                    <Grid
-                      item
-                      xs={4}
-                      container
-                      direction="row"
-                      justifyContent="center"
-                      alignItems="center"
-                      style={{
-                        objectFit: "fill",
-                      }}
+                    <IconButton
+                      onClick={() =>
+                        window.open("https://www.google.com", "_blank")
+                      }
                     >
-                      <IconButton>
-                        <Icon
-                          style={{
-                            backgroundImage: "url('./icons/fb.svg')",
-                            fontSize: 55,
-                          }}
-                        ></Icon>
-                      </IconButton>
-                    </Grid>
-
-                    <Grid
-                      item
-                      xs={4}
-                      container
-                      direction="row"
-                      justifyContent="center"
-                      alignItems="center"
-                      style={{
-                        objectFit: "fill",
-                      }}
-                    >
-                      <IconButton>
-                        <Icon
-                          style={{
-                            backgroundImage: "url('./icons/google.svg')",
-                            fontSize: 55,
-                          }}
-                        ></Icon>
-                      </IconButton>
-                    </Grid>
-                    <Grid
-                      item
-                      xs={4}
-                      container
-                      direction="row"
-                      justifyContent="center"
-                      alignItems="center"
-                      style={{
-                        objectFit: "fit",
-                      }}
-                    >
-                      <IconButton>
-                        <Icon
-                          style={{
-                            backgroundImage: "url('./icons/apple.svg')",
-                            fontSize: 55,
-                          }}
-                        ></Icon>
-                      </IconButton>
-                    </Grid>
+                      <Icon
+                        style={{
+                          backgroundImage: "url('./icons/fb.svg')",
+                          fontSize: 70,
+                          borderRadius: 8,
+                          boxSizing: "border-box",
+                          backgroundRepeat: "no-repeat",
+                        }}
+                      ></Icon>
+                    </IconButton>
                   </Grid>
-                </div>
-              </Container>
+
+                  <Grid
+                    item
+                    xs={4}
+                    md={4}
+                    container
+                    direction="row"
+                    justifyContent="center"
+                    alignItems="center"
+                  >
+                    <IconButton
+                      onClick={() =>
+                        window.open("https://www.google.com", "_blank")
+                      }
+                    >
+                      <Icon
+                        style={{
+                          backgroundImage: "url('./icons/google.svg')",
+                          fontSize: 70,
+                          borderRadius: 8,
+                          boxSizing: "border-box",
+                          backgroundRepeat: "no-repeat",
+                        }}
+                      ></Icon>
+                    </IconButton>
+                  </Grid>
+                  <Grid
+                    item
+                    xs={4}
+                    md={4}
+                    container
+                    direction="row"
+                    justifyContent="center"
+                    alignItems="center"
+                  >
+                    <IconButton
+                      onClick={() =>
+                        window.open("https://www.google.com", "_blank")
+                      }
+                    >
+                      <Icon
+                        style={{
+                          backgroundImage: "url('./icons/apple.svg')",
+                          fontSize: 70,
+                          borderRadius: 8,
+                          boxSizing: "border-box",
+                          backgroundRepeat: "no-repeat",
+                        }}
+                      ></Icon>
+                    </IconButton>
+                  </Grid>
+                </Grid>
+              </div>
             </div>
+
             <div
               className="createAcc"
               style={{
@@ -384,23 +405,38 @@ const SignIn = () => {
                 width: "77.5%",
                 height: "3%",
                 left: 40,
-                top: 800,
-                fontFamily: "Poppins",
-                fontStyle: "Medium",
-                fontWeight: 400,
-                fontSize: 20,
-                lineHeight: "165%",
-                letterSpacing: -0.3,
+                bottom: 34,
+                right: 41,
               }}
             >
               <Typography
-                style={{ color: "gray" }}
+                style={{
+                  color: "#888888",
+                  fontFamily: "Poppins",
+                  fontStyle: "Medium",
+                  fontWeight: 400,
+                  fontSize: 16,
+                  letterSpacing: -0.3,
+                }}
                 variant="subtitle"
                 display="block"
                 gutterBottom
               >
-                Don't have an account?{" "}
-                <Link style={{ color: "black" }} href="/createAccount">
+                Don't have an account?{"  "}
+                &nbsp;
+                <Link
+                  style={{
+                    color: "black",
+                    fontFamily: "Poppins",
+                    fontStyle: "Medium",
+                    fontWeight: 400,
+                    fontSize: 16,
+                    letterSpacing: -0.3,
+                    textDecorationLine: "none",
+                    textAlign: "right",
+                  }}
+                  href="/createAccount"
+                >
                   Create one
                 </Link>
               </Typography>

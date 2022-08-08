@@ -60,9 +60,9 @@ const Home = () => {
                     style={{
                       color: "white",
                       fontFamily: "'Poppins', sans-serif",
-                      fontWeight:400,
-                      fontStyle:"normal",
-                      fontSize:17
+                      fontWeight: 400,
+                      fontStyle: "normal",
+                      fontSize: 17,
                     }}
                   >
                     Use Trollii to search for the cheapest hotel deal for all
@@ -73,19 +73,18 @@ const Home = () => {
                   variant="contained"
                   style={{
                     position: "absolute",
-                    bottom:20,
+                    bottom: 20,
                     left: 16,
                     width: "91%",
                     height: "6%",
-                    boxSizing:"border-box",
-                    borderRadius:8,
+                    boxSizing: "border-box",
+                    borderRadius: 8,
                     color: "white",
-                      fontFamily: "'Poppins', sans-serif",
-                      fontWeight:400,
-                      fontStyle:"normal",
-                      fontSize:17,
-                      textTransform:"none"
-
+                    fontFamily: "'Poppins', sans-serif",
+                    fontWeight: 400,
+                    fontStyle: "normal",
+                    fontSize: 17,
+                    textTransform: "none",
                   }}
                   onClick={() => {
                     setBoardingScreen(2);
@@ -118,12 +117,11 @@ const Home = () => {
                     right: 13,
                     color: "gray",
                     fontFamily: "'Poppins', sans-serif",
-                    fontWeight:400,
-                    fontStyle:"normal",
-                    fontSize:16,
-                    letterSpacing:-0.3,
-                    textTransform:"lowercase"
-
+                    fontWeight: 400,
+                    fontStyle: "normal",
+                    fontSize: 16,
+                    letterSpacing: -0.3,
+                    textTransform: "lowercase",
                   }}
                   variant="text"
                   onClick={() => navigate("/signIn")}
@@ -157,35 +155,37 @@ const Home = () => {
                   position: "absolute",
                   left: 15,
                   textAlign: "center",
-
                 }}
               >
                 <h2
                   style={{
                     color: "black",
                     margin: 0,
-                    bottom:"68.97%",
-                      fontFamily: "'Poppins', sans-serif",
-                      fontWeight:600,
-                      fontStyle:"normal",
-                      fontSize:24,
-                      lineHeight:1,
-                      letterSpacing:-0.3
+                    bottom: "68.97%",
+                    fontFamily: "'Poppins', sans-serif",
+                    fontWeight: 600,
+                    fontStyle: "normal",
+                    fontSize: 24,
+                    lineHeight: 1,
+                    letterSpacing: -0.3,
                   }}
                 >
                   Customize your reservation
                 </h2>
-                <h4 style={{ 
-                left:"2.73%",
-                right:"2.42%",
-                top:"37.93%",
-                color : "black",
-                fontFamily: "'Poppins', sans-serif",
-                fontWeight:400,
-                fontStyle:"normal",
-                fontSize:16,
-                textAlign:"center",
-                letterSpacing:-0.3}}>
+                <h4
+                  style={{
+                    left: "2.73%",
+                    right: "2.42%",
+                    top: "37.93%",
+                    color: "black",
+                    fontFamily: "'Poppins', sans-serif",
+                    fontWeight: 400,
+                    fontStyle: "normal",
+                    fontSize: 16,
+                    textAlign: "center",
+                    letterSpacing: -0.3,
+                  }}
+                >
                   Choose the hotel area, your check in, check out and even how
                   many rooms you want !
                 </h4>
@@ -200,16 +200,15 @@ const Home = () => {
                     height: "6%",
                     position: "absolute",
                     left: 16,
-                    boxSizing:"border-box",
-                    borderRadius:8,
+                    boxSizing: "border-box",
+                    borderRadius: 8,
                     color: "white",
-                      fontFamily: "'Poppins', sans-serif",
-                      fontWeight:500,
-                      fontStyle:"normal",
-                      fontSize:16,
-                      letterSpacing:-0.3,
-                      textTransform:"none"
-
+                    fontFamily: "'Poppins', sans-serif",
+                    fontWeight: 500,
+                    fontStyle: "normal",
+                    fontSize: 16,
+                    letterSpacing: -0.3,
+                    textTransform: "none",
                   }}
                   onClick={() => {
                     setBoardingScreen(3);
@@ -243,12 +242,11 @@ const Home = () => {
                     right: 13,
                     color: "gray",
                     fontFamily: "'Poppins', sans-serif",
-                    fontWeight:400,
-                    fontStyle:"normal",
-                    fontSize:16,
-                    letterSpacing:-0.3,
-                    textTransform:"lowercase"
-
+                    fontWeight: 400,
+                    fontStyle: "normal",
+                    fontSize: 16,
+                    letterSpacing: -0.3,
+                    textTransform: "lowercase",
                   }}
                   variant="text"
                   onClick={() => navigate("/signIn")}
@@ -279,9 +277,8 @@ const Home = () => {
                   width: "86.9%",
                   height: "11.5%",
                   position: "absolute",
-                  left:24 ,
+                  left: 24,
                   textAlign: "center",
-                  
                 }}
               >
                 <h2
@@ -289,30 +286,33 @@ const Home = () => {
                     color: "black",
                     margin: 0,
                     position: "absolute",
-                    left:"5.11%",
-                    bottom:"60.87%",
-                    right:"5.43%",
+                    left: "5.11%",
+                    bottom: "60.87%",
+                    right: "5.43%",
                     fontFamily: "'Poppins', sans-serif",
-                    fontWeight:600,
-                    fontStyle:"normal",
-                    fontSize:24,
-                    letterSpacing:-0.3,
-                    textAlign:"center",
-                    
+                    fontWeight: 600,
+                    fontStyle: "normal",
+                    fontSize: 24,
+                    letterSpacing: -0.3,
+                    textAlign: "center",
                   }}
                 >
                   Book your desired hotel
                 </h2>
-                <h4 style={{ color: "black",
+                <h4
+                  style={{
+                    color: "black",
                     margin: 0,
                     position: "absolute",
-                    top:"47.83%",
+                    top: "47.83%",
                     fontFamily: "'Poppins', sans-serif",
-                    fontWeight:400,
-                    fontStyle:"normal",
-                    fontSize:16,
-                    letterSpacing:-0.3,
-                    textAlign:"center", }}>
+                    fontWeight: 400,
+                    fontStyle: "normal",
+                    fontSize: 16,
+                    letterSpacing: -0.3,
+                    textAlign: "center",
+                  }}
+                >
                   Look for reviews, facilities, price and more details about the
                   hotel
                 </h4>
@@ -328,16 +328,15 @@ const Home = () => {
                     height: "6%",
                     position: "absolute",
                     left: 16,
-                    boxSizing:"border-box",
-                    borderRadius:8,
+                    boxSizing: "border-box",
+                    borderRadius: 8,
                     color: "white",
-                      fontFamily: "'Poppins', sans-serif",
-                      fontWeight:500,
-                      fontStyle:"normal",
-                      fontSize:16,
-                      letterSpacing:-0.3,
-                      textTransform:"none"
-
+                    fontFamily: "'Poppins', sans-serif",
+                    fontWeight: 500,
+                    fontStyle: "normal",
+                    fontSize: 16,
+                    letterSpacing: -0.3,
+                    textTransform: "none",
                   }}
                   onClick={() => {
                     setBoardingScreen(4);
@@ -395,16 +394,20 @@ const Home = () => {
                 >
                   Congratulations!
                 </h2>
-                <h4 style={{ color: "black",
-               margin: 0,
-               position: "absolute",
-               top:"47.83%",
-               fontFamily: "'Poppins', sans-serif",
-               fontWeight:400,
-               fontStyle:"normal",
-               fontSize:16,
-               letterSpacing:-0.3,
-               textAlign:"center", }}>
+                <h4
+                  style={{
+                    color: "black",
+                    margin: 0,
+                    position: "absolute",
+                    top: "47.83%",
+                    fontFamily: "'Poppins', sans-serif",
+                    fontWeight: 400,
+                    fontStyle: "normal",
+                    fontSize: 16,
+                    letterSpacing: -0.3,
+                    textAlign: "center",
+                  }}
+                >
                   Have fun searching and finding the most suitable hotel for
                   yourself
                 </h4>
@@ -419,15 +422,15 @@ const Home = () => {
                     height: "6%",
                     position: "absolute",
                     left: 16,
-                    boxSizing:"border-box",
-                    borderRadius:8,
+                    boxSizing: "border-box",
+                    borderRadius: 8,
                     color: "white",
-                      fontFamily: "'Poppins', sans-serif",
-                      fontWeight:500,
-                      fontStyle:"normal",
-                      fontSize:16,
-                      letterSpacing:-0.3,
-                      textTransform:"none"
+                    fontFamily: "'Poppins', sans-serif",
+                    fontWeight: 500,
+                    fontStyle: "normal",
+                    fontSize: 16,
+                    letterSpacing: -0.3,
+                    textTransform: "none",
                   }}
                   onClick={() => navigate("/signIn")}
                 >
