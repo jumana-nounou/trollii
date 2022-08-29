@@ -7,9 +7,17 @@ import {
   Button,
   CardActions,
   CardMedia,
+  Rating,
+  Icon,
 } from "@mui/material";
-
+import PoolRoundedIcon from "@mui/icons-material/PoolRounded";
+import WifiIcon from "@mui/icons-material/Wifi";
+import FitnessCenterIcon from "@mui/icons-material/FitnessCenter";
+import RestaurantIcon from "@mui/icons-material/Restaurant";
+import LocalCafeIcon from "@mui/icons-material/LocalCafe";
+import LocalParkingIcon from "@mui/icons-material/LocalParking";
 import * as React from "react";
+import PoolRounded from "@mui/icons-material/PoolRounded";
 const hotelCard = () => {
   return (
     <Box
@@ -22,10 +30,7 @@ const hotelCard = () => {
         boxShadow: "0px 2px 8px rgba(38, 36, 131, 0.25)",
       }}
     >
-      <Card
-        variant="outlined"
-        style={{ position: "absolute", width: "100%", height: "40%" }}
-      >
+      <Card variant="outlined">
         <CardContent>
           <CardMedia
             component="img"
@@ -33,16 +38,13 @@ const hotelCard = () => {
             style={{
               // backgroundImage: URL("../views/imgs/hotel.png"),
               backgroundColor: "royalblue",
-              width: "30.2%",
-              height: "40%",
-              position: "absolute",
+
               left: 0,
               top: 1,
             }}
           />
           <Typography
             style={{
-              position: "absolute",
               left: 200,
               fontFamily: "Rubik",
               fontStyle: "normal",
@@ -53,10 +55,22 @@ const hotelCard = () => {
           >
             intercontinental cairo semiramis, IHG Hotel
           </Typography>
+          <Rating readonly defaultValue={5}></Rating>
+          <Typography
+            style={{
+              fontFamily: "Rubik",
+              fontStyle: "normal",
+              fontWeight: 400,
+              fontSize: 14,
+              color: "#5D5C66",
+            }}
+          >
+            Cairo, Egypt
+          </Typography>
+
           <Typography
             variant="subtitle"
             style={{
-              position: "absolute",
               left: 200,
               top: 70,
               fontFamily: "Rubik",
@@ -70,10 +84,52 @@ const hotelCard = () => {
             WiFi, express check-in and check-out and The check-out accommodation
             offers a 24-hour front desk.... More
           </Typography>
-          <Typography>nmfdl,;wdc,l</Typography>
+          <Typography
+            style={{
+              fontFamily: "Rubik",
+              fontStyle: "normal",
+              fontWeight: 500,
+              fontSize: 14,
+              color: "#000000",
+            }}
+          >
+            4.5/5
+          </Typography>
+          <Icon></Icon>
+          <Typography
+            style={{
+              fontFamily: "Rubik",
+              fontStyle: "normal",
+              fontWeight: 300,
+              fontSize: 14,
+              color: "#5D5C66",
+            }}
+          >
+            7,262 Reviews
+          </Typography>
+          <PoolRounded md={{ color: "#5F41B3" }} />
+          <WifiIcon color="primary" />
+          <FitnessCenterIcon />
+          <RestaurantIcon />
+          <LocalParkingIcon />
+          <LocalCafeIcon />
         </CardContent>
         <CardActions>
-          <Button size="small">Learn More</Button>
+          <Button
+            size="small"
+            variant="filled"
+            style={{
+              fontFamily: "Inter",
+              fontStyle: "normal",
+              fontWeight: 500,
+              fontSize: 16,
+              backgroundColor: "#5F41B3",
+              borderRadius: 10,
+              color: "white",
+            }}
+          >
+            Select
+          </Button>
         </CardActions>
       </Card>
     </Box>

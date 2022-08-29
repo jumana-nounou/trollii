@@ -16,7 +16,7 @@ import {
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { Box, Checkbox } from "@mui/joy";
-
+import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import PlaceOutlinedIcon from "@mui/icons-material/PlaceOutlined";
 import PersonIcon from "@mui/icons-material/Person";
 import Navbar from "../components/Navbar";
@@ -39,12 +39,15 @@ const Home = () => {
           style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
         >
           <Navbar />
-          <Grid
+          <br />
+          <br />
+          <br />
+
+          {/* <Grid
             container
             justifyContent="space-evenly"
             rowSpacing={2}
             columnSpacing={1}
-            spacing={5}
             style={{
               width: "83.33%",
               boxShadow: "0px 2px 8px rgba(38, 36, 131, 0.25)",
@@ -129,7 +132,7 @@ const Home = () => {
                 InputProps={{
                   startAdornment: (
                     <InputAdornment position="start">
-                      <PlaceOutlinedIcon />
+                      <CalendarMonthIcon />
                     </InputAdornment>
                   ),
                 }}
@@ -159,7 +162,7 @@ const Home = () => {
                 InputProps={{
                   startAdornment: (
                     <InputAdornment position="start">
-                      <PlaceOutlinedIcon />
+                      <CalendarMonthIcon />
                     </InputAdornment>
                   ),
                 }}
@@ -170,7 +173,7 @@ const Home = () => {
                 }}
               />
             </Grid>
-            <Grid item md={12}>
+            <Grid item md={8}>
               <Link
                 component="button"
                 underline="none"
@@ -195,8 +198,8 @@ const Home = () => {
                 Search Hotels
               </Link>
             </Grid>
-          </Grid>
-          <Grid
+          </Grid> */}
+          {/* <Grid
             container
             alignItems="left"
             justifyContent="left"
@@ -584,15 +587,14 @@ const Home = () => {
               />
               <br />
             </Grid>
-          </Grid>
+          </Grid> */}
 
           <Grid
             container
-            width="55%"
-            style={{
-              boxShadow: "0 2 8 rgba(38, 36, 131, 0.25)",
-              borderRadius: 20,
-            }}
+            maxWidth="55%"
+            rowSpacing={3}
+            // bgcolor="pink"
+            top={90}
           >
             <Grid item md={12} justifyContent="space-evenly">
               <Tabs
@@ -655,9 +657,9 @@ const Home = () => {
                 />
               </Tabs>
             </Grid>
-            {/* <Grid item md={12}>
+            <Grid item md={12}>
               <HotelCard />
-            </Grid> */}
+            </Grid>
           </Grid>
           <Footer />
         </div>

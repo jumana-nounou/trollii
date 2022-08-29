@@ -397,7 +397,6 @@ const footer = () => {
       <Grid
         style={{
           left: "79.86%",
-          //position: "absolute"
         }}
       >
         <h5
