@@ -13,7 +13,7 @@ import * as React from "react";
 const hotelCard = () => {
   return (
     <Box
-      minHeight={40}
+      minHeight={30}
       style={{
         left: "29.16%",
         borderRadius: 20,
@@ -34,7 +34,7 @@ const hotelCard = () => {
               // backgroundImage: URL("../views/imgs/hotel.png"),
               backgroundColor: "royalblue",
               width: "30.2%",
-              height: "100%",
+              height: "40%",
               position: "absolute",
               left: 0,
               top: 1,

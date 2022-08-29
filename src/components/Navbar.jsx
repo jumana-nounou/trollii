@@ -7,6 +7,7 @@ import {
   MenuItem,
   FormControl,
   Select,
+  Grid,
 } from "@mui/material";
 import * as React from "react";
 
@@ -28,159 +29,132 @@ const Navbar = (props) => {
         height: "9%",
         boxShadow: "0px 2px 8px rgba(38, 36, 131, 0.05)",
         width: "100%",
-        position: "absolute",
         left: 0,
         top: 0,
+        display: "flex",
       }}
     >
-      <div
-        href="/"
-        className="logo"
-        style={{
-          position: "absolute",
-          left: 80,
-          top: 14,
-        }}
-      >
-        <Typography
-          style={{
-            position: "absolute",
-            color: "#5F41B3",
-            fontFamily: "Fredoka",
-            fontStyle: "normal",
-            fontWeight: 600,
-            fontSize: 35,
-            lineHeight: "42px",
-            letterSpacing: -0.3,
-          }}
-        >
-          Trollii
-        </Typography>
-      </div>
-      <div
-        className="tabs"
-        style={{ position: "absolute", width: "100%", height: "100%" }}
-      >
-        <Tabs
-          value={value}
-          onChange={handlevalue}
-          aria-label="icon position tabs example"
-          style={{
-            height: "100%",
-            width: "100%",
-            position: "absolute",
-            color: "#FFC725",
-          }}
-        >
-          <Tab
+      <Grid container sx={{ pt: 1 }}>
+        <Grid item md={6} sm={6} href="/">
+          <Typography
             style={{
-              position: "absolute",
-              top: 14,
-              right: 527,
-              // left: 862,
-              fontFamily: "Rubik",
+              color: "#5F41B3",
+              fontFamily: "Fredoka",
               fontStyle: "normal",
-              textTransform: "none",
-              color: "#362566",
-              fontSize: 16,
-              fontWeight: 400,
-              height: "70%",
+              fontWeight: 600,
+              fontSize: 35,
+              lineHeight: "42px",
+              letterSpacing: -0.3,
             }}
-            label="Flights"
-          />
-          <Tab
-            style={{
-              position: "absolute",
-              top: 14,
-              right: 429,
-              // left: 963,
-              fontFamily: "Rubik",
-              fontStyle: "normal",
-              textTransform: "none",
-              color: "#362566",
-              fontSize: 16,
-              fontWeight: 400,
-            }}
-            label="Hotels"
-          />
-          <Tab
-            style={{
-              position: "absolute",
-              top: 14,
-              right: 338,
-              // left: 1061,
-              fontFamily: "Rubik",
-              fontStyle: "normal",
-              textTransform: "none",
-              color: "#362566",
-              fontSize: 16,
-              fontWeight: 400,
-            }}
-            label="Tours"
-          />
-        </Tabs>
-      </div>
-      <div className="country" style={{}}>
-        <FormControl
-          variant="outlined"
-          style={{
-            postition: "absolute",
-            borderColor: "white",
-            position: "absolute",
-            right: "17.8%",
-            top: 14,
-            height: "10%",
-          }}
-        >
-          <InputLabel
-            style={{
-              fontFamily: "Rubik",
-              fontStyle: "normal",
-              fontWeight: 400,
-              fontSize: 16,
-              lineHeight: "20%",
-              color: "white",
-              borderBlockColor: "white",
-            }}
-          ></InputLabel>
-          <Select
-            style={{
-              fontFamily: "Rubik",
-              fontStyle: "normal",
-              fontWeight: 400,
-              fontSize: 16,
-              textAlign: "center",
-            }}
-            value={country}
-            onChange={handleCountry}
           >
-            <MenuItem value={10}>EGY</MenuItem>
-            <MenuItem value={20}>UK</MenuItem>
-            <MenuItem value={30}>US</MenuItem>
-          </Select>
-        </FormControl>
-      </div>
-      <div
-        className="login"
-        style={{
-          position: "absolute",
-          top: 14,
-          right: 80,
-          width: "7.4%",
-          height: "22.45%",
-        }}
-      >
-        <Button
+            Trollii
+          </Typography>
+        </Grid>
+
+        <Grid
+          item
+          md={4}
+          sm={4}
+          className="tabs"
           style={{
-            position: "absolute",
-            backgroundColor: "#5F41B3",
-            borderRadius: 10,
+            width: "100%",
+            height: "100%",
           }}
-          variant="contained"
         >
-          Login
-        </Button>
-      </div>
+          <Tabs
+            value={value}
+            onChange={handlevalue}
+            style={{
+              height: "100%",
+              width: "100%",
+              // position: "absolute",
+              color: "#FFC725",
+            }}
+          >
+            <Tab
+              style={{
+                fontFamily: "Rubik",
+                fontStyle: "normal",
+                textTransform: "none",
+                color: "#362566",
+                fontSize: 16,
+                fontWeight: 400,
+                height: "70%",
+              }}
+              label="Flights"
+            />
+            <Tab
+              style={{
+                fontFamily: "Rubik",
+                fontStyle: "normal",
+                textTransform: "none",
+                color: "#362566",
+                fontSize: 16,
+                fontWeight: 400,
+              }}
+              label="Hotels"
+            />
+            <Tab
+              style={{
+                fontFamily: "Rubik",
+                fontStyle: "normal",
+                textTransform: "none",
+                color: "#362566",
+                fontSize: 16,
+                fontWeight: 400,
+              }}
+              label="Tours"
+            />
+          </Tabs>
+        </Grid>
+        <Grid item md={1} sm={1}>
+          <FormControl
+            style={{
+              borderColor: "white",
+              height: "10%",
+            }}
+          >
+            <InputLabel
+              style={{
+                fontFamily: "Rubik",
+                fontStyle: "normal",
+                fontWeight: 400,
+                fontSize: 16,
+                lineHeight: "20%",
+                color: "white",
+                borderBlockColor: "white",
+              }}
+            ></InputLabel>
+            <Select
+              style={{
+                fontFamily: "Rubik",
+                fontStyle: "normal",
+                fontWeight: 400,
+                fontSize: 16,
+                textAlign: "center",
+              }}
+              value={country}
+              onChange={handleCountry}
+            >
+              <MenuItem value={10}>EGY</MenuItem>
+              <MenuItem value={20}>UK</MenuItem>
+              <MenuItem value={30}>US</MenuItem>
+            </Select>
+          </FormControl>
+        </Grid>
+
+        <Grid item md={1} sm={1}>
+          <Button
+            style={{
+              backgroundColor: "#5F41B3",
+              borderRadius: 10,
+            }}
+            variant="contained"
+          >
+            Login
+          </Button>
+        </Grid>
+      </Grid>
     </nav>
   );
 };

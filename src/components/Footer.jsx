@@ -1,34 +1,29 @@
-import { Typography, Link } from "@mui/material";
+import { Typography, Link, Grid } from "@mui/material";
 import * as React from "react";
-import {
-  MDBFooter,
-  MDBContainer,
-  MDBIcon,
-  MDBInput,
-  MDBCol,
-  MDBRow,
-  MDBBtn,
-} from "mdb-react-ui-kit";
 
 const footer = () => {
   return (
-    <div
-      className="container"
+    <Grid
+      container
       style={{
-        position: "absolute",
-        bottom: 0,
-        left: 0,
-        top: "100%",
+        display: "flex",
+        flex: "1",
+        flexDirection: "row",
+        minHeight: "100",
         width: "100%",
         height: "25%",
         boxShadow: "0px 2px 8px rgba(38, 36, 131, 0.1)",
+        margin: 0,
+        bottom: 0,
+        left: "0%",
       }}
     >
-      <div
+      <Grid
+        item
+        md={2}
         href="/"
         className="logo"
         style={{
-          position: "absolute",
           left: 80,
           top: 14,
           height: "1.145%",
@@ -36,7 +31,7 @@ const footer = () => {
       >
         <Typography
           style={{
-            position: "absolute",
+            // position: "absolute",
             color: "#5F41B3",
             fontFamily: "Fredoka",
             fontStyle: "normal",
@@ -48,454 +43,457 @@ const footer = () => {
         >
           Trollii
         </Typography>
-      </div>
-      <div className="links">
-        <MDBRow
+      </Grid>
+      <Grid
+        item
+        md={2}
+        className="company"
+        style={{
+          left: "23%",
+          margin: 0,
+        }}
+      >
+        <h5
           style={{
-            position: "absolute",
-            height: "100%",
-            width: "100%",
-            margin: 0,
+            fontFamily: "Rubik",
+            fontStyle: "normal",
+            fontWeight: "500%",
+            fontSize: 16,
+            color: "#362566",
           }}
         >
-          <MDBCol
-            className="company"
+          Company
+        </h5>
+
+        <li
+          style={{
+            listStyle: "none",
+            textAlign: "left",
+          }}
+        >
+          <Link
             style={{
-              left: "23%",
-              position: "absolute",
-              margin: 0,
+              textDecoration: "none",
+              fontFamily: "Rubik",
+              fontStyle: "normal",
+              fontWeight: 400,
+              fontSize: 14,
+              color: "#362566",
             }}
+            to="/example"
           >
-            <h5
-              style={{
-                fontFamily: "Rubik",
-                fontStyle: "normal",
-                fontWeight: "500%",
-                fontSize: 16,
-                color: "#362566",
-              }}
-            >
-              Company
-            </h5>
-
-            <li
-              style={{
-                listStyle: "none",
-                textAlign: "left",
-              }}
-            >
-              <Link
-                style={{
-                  textDecoration: "none",
-                  fontFamily: "Rubik",
-                  fontStyle: "normal",
-                  fontWeight: 400,
-                  fontSize: 14,
-                  color: "#362566",
-                }}
-                to="/example"
-              >
-                About
-              </Link>
-            </li>
-            <li
-              style={{
-                listStyle: "none",
-                textAlign: "left",
-              }}
-            >
-              <Link
-                style={{
-                  textDecoration: "none",
-                  fontFamily: "Rubik",
-                  fontStyle: "normal",
-                  fontWeight: 400,
-                  fontSize: 14,
-                  color: "#362566",
-                }}
-                to="/example"
-              >
-                Mobile
-              </Link>
-            </li>
-            <li
-              style={{
-                listStyle: "none",
-                textAlign: "left",
-              }}
-            >
-              <Link
-                style={{
-                  textDecoration: "none",
-                  fontFamily: "Rubik",
-                  fontStyle: "normal",
-                  fontWeight: 400,
-                  fontSize: 14,
-                  color: "#362566",
-                }}
-                to="/example"
-              >
-                Blog
-              </Link>
-            </li>
-            <li
-              style={{
-                listStyle: "none",
-                textAlign: "left",
-              }}
-            >
-              <Link
-                style={{
-                  textDecoration: "none",
-                  fontFamily: "Rubik",
-                  fontStyle: "normal",
-                  fontWeight: 400,
-                  fontSize: 14,
-                  color: "#362566",
-                }}
-                to="/example"
-              >
-                How we work
-              </Link>
-            </li>
-          </MDBCol>
-
-          <MDBCol
-            className="legal"
+            About
+          </Link>
+        </li>
+        <li
+          style={{
+            listStyle: "none",
+            textAlign: "left",
+          }}
+        >
+          <Link
             style={{
-              left: "37%",
-              position: "absolute",
-              margin: 0,
+              textDecoration: "none",
+              fontFamily: "Rubik",
+              fontStyle: "normal",
+              fontWeight: 400,
+              fontSize: 14,
+              color: "#362566",
             }}
+            to="/example"
           >
-            <h5
-              style={{
-                fontFamily: "Rubik",
-                fontStyle: "normal",
-                fontWeight: "500%",
-                fontSize: 16,
-                color: "#362566",
-              }}
-            >
-              Legal
-            </h5>
-
-            <li
-              style={{
-                listStyle: "none",
-                textAlign: "left",
-              }}
-            >
-              <Link
-                style={{
-                  textDecoration: "none",
-                  fontFamily: "Rubik",
-                  fontStyle: "normal",
-                  fontWeight: 400,
-                  fontSize: 14,
-                  color: "#362566",
-                }}
-                to="/example"
-              >
-                Terms & Conditions
-              </Link>
-            </li>
-            <li
-              style={{
-                listStyle: "none",
-                textAlign: "left",
-              }}
-            >
-              <Link
-                style={{
-                  textDecoration: "none",
-                  fontFamily: "Rubik",
-                  fontStyle: "normal",
-                  fontWeight: 400,
-                  fontSize: 14,
-                  color: "#362566",
-                }}
-                to="/example"
-              >
-                Privacy policy
-              </Link>
-            </li>
-          </MDBCol>
-
-          <MDBCol
-            className="mb-4 mb-md-0"
-            style={{ left: "50%", position: "absolute" }}
+            Mobile
+          </Link>
+        </li>
+        <li
+          style={{
+            listStyle: "none",
+            textAlign: "left",
+          }}
+        >
+          <Link
+            style={{
+              textDecoration: "none",
+              fontFamily: "Rubik",
+              fontStyle: "normal",
+              fontWeight: 400,
+              fontSize: 14,
+              color: "#362566",
+            }}
+            to="/example"
           >
-            <h5
-              style={{
-                fontFamily: "Rubik",
-                fontStyle: "normal",
-                fontWeight: "500%",
-                fontSize: 16,
-                color: "#362566",
-              }}
-            >
-              Support
-            </h5>
-            <li
-              style={{
-                listStyle: "none",
-                textAlign: "left",
-              }}
-            >
-              <Link
-                style={{
-                  textDecoration: "none",
-                  fontFamily: "Rubik",
-                  fontStyle: "normal",
-                  fontWeight: 400,
-                  fontSize: 14,
-                  color: "#362566",
-                }}
-                to="/example"
-              >
-                Contact Us
-              </Link>
-            </li>
-            <li
-              style={{
-                listStyle: "none",
-                textAlign: "left",
-              }}
-            >
-              <Link
-                style={{
-                  textDecoration: "none",
-                  fontFamily: "Rubik",
-                  fontStyle: "normal",
-                  fontWeight: 400,
-                  fontSize: 14,
-                  color: "#362566",
-                }}
-                to="/example"
-              >
-                FAQs
-              </Link>
-            </li>
-          </MDBCol>
-
-          <MDBCol
-            className="socialmedia"
-            style={{ left: "63.75%", position: "absolute" }}
+            Blog
+          </Link>
+        </li>
+        <li
+          style={{
+            listStyle: "none",
+            textAlign: "left",
+          }}
+        >
+          <Link
+            style={{
+              textDecoration: "none",
+              fontFamily: "Rubik",
+              fontStyle: "normal",
+              fontWeight: 400,
+              fontSize: 14,
+              color: "#362566",
+            }}
+            to="/example"
           >
-            <h5
-              style={{
-                fontFamily: "Rubik",
-                fontStyle: "normal",
-                fontWeight: "500%",
-                fontSize: 16,
-                color: "#362566",
-              }}
-            >
-              Social media
-            </h5>
+            How we work
+          </Link>
+        </li>
+      </Grid>
 
-            <li
-              style={{
-                listStyle: "none",
-                textAlign: "left",
-              }}
-            >
-              <Link
-                style={{
-                  textDecoration: "none",
-                  fontFamily: "Rubik",
-                  fontStyle: "normal",
-                  fontWeight: 400,
-                  fontSize: 14,
-                  color: "#362566",
-                }}
-                to="/example"
-              >
-                Facebook
-              </Link>
-            </li>
-            <li
-              style={{
-                listStyle: "none",
-                textAlign: "left",
-              }}
-            >
-              <Link
-                style={{
-                  textDecoration: "none",
-                  fontFamily: "Rubik",
-                  fontStyle: "normal",
-                  fontWeight: 400,
-                  fontSize: 14,
-                  color: "#362566",
-                }}
-                to="/example"
-              >
-                Linkedin
-              </Link>
-            </li>
-            <li
-              style={{
-                listStyle: "none",
-                textAlign: "left",
-              }}
-            >
-              <Link
-                style={{
-                  textDecoration: "none",
-                  fontFamily: "Rubik",
-                  fontStyle: "normal",
-                  fontWeight: 400,
-                  fontSize: 14,
-                  color: "#362566",
-                }}
-                to="/example"
-              >
-                Instagram
-              </Link>
-            </li>
-            <li
-              style={{
-                listStyle: "none",
-                textAlign: "left",
-              }}
-            >
-              <Link
-                style={{
-                  textDecoration: "none",
-                  fontFamily: "Rubik",
-                  fontStyle: "normal",
-                  fontWeight: 400,
-                  fontSize: 14,
-                  color: "#362566",
-                }}
-                to="/example"
-              >
-                Twitter
-              </Link>
-            </li>
-            <li
-              style={{
-                listStyle: "none",
-                textAlign: "left",
-              }}
-            >
-              <Link
-                style={{
-                  textDecoration: "none",
-                  fontFamily: "Rubik",
-                  fontStyle: "normal",
-                  fontWeight: 400,
-                  fontSize: 14,
-                  color: "#362566",
-                }}
-                to="/example"
-              >
-                Youtube
-              </Link>
-            </li>
-          </MDBCol>
-          <MDBCol
-            className="mb-4 mb-md-0"
-            style={{ left: "79.86%", position: "absolute" }}
+      <Grid
+        item
+        className="legal"
+        md={2}
+        style={{
+          left: "37%",
+          margin: 0,
+        }}
+      >
+        <h5
+          style={{
+            fontFamily: "Rubik",
+            fontStyle: "normal",
+            fontWeight: "500%",
+            fontSize: 16,
+            color: "#362566",
+          }}
+        >
+          Legal
+        </h5>
+
+        <li
+          style={{
+            listStyle: "none",
+            textAlign: "left",
+          }}
+        >
+          <Link
+            style={{
+              textDecoration: "none",
+              fontFamily: "Rubik",
+              fontStyle: "normal",
+              fontWeight: 400,
+              fontSize: 14,
+              color: "#362566",
+            }}
+            to="/example"
           >
-            <h5
-              style={{
-                fontFamily: "Rubik",
-                fontStyle: "normal",
-                fontWeight: "500%",
-                fontSize: 16,
-                color: "#362566",
-              }}
-            >
-              More
-            </h5>
+            Terms & Conditions
+          </Link>
+        </li>
+        <li
+          style={{
+            listStyle: "none",
+            textAlign: "left",
+          }}
+        >
+          <Link
+            style={{
+              textDecoration: "none",
+              fontFamily: "Rubik",
+              fontStyle: "normal",
+              fontWeight: 400,
+              fontSize: 14,
+              color: "#362566",
+            }}
+            to="/example"
+          >
+            Privacy policy
+          </Link>
+        </li>
+      </Grid>
 
-            <li
-              style={{
-                listStyle: "none",
-                textAlign: "left",
-              }}
-            >
-              <Link
-                style={{
-                  textDecoration: "none",
-                  fontFamily: "Rubik",
-                  fontStyle: "normal",
-                  fontWeight: 400,
-                  fontSize: 14,
-                  color: "#362566",
-                }}
-                to="/example"
-              >
-                Airline fees
-              </Link>
-            </li>
-            <li
-              style={{
-                listStyle: "none",
-                textAlign: "left",
-              }}
-            >
-              <Link
-                style={{
-                  textDecoration: "none",
-                  fontFamily: "Rubik",
-                  fontStyle: "normal",
-                  fontWeight: 400,
-                  fontSize: 14,
-                  color: "#362566",
-                }}
-                to="/example"
-              >
-                Airlines
-              </Link>
-            </li>
-            <li
-              style={{
-                listStyle: "none",
-                textAlign: "left",
-              }}
-            >
-              <Link
-                style={{
-                  textDecoration: "none",
-                  fontFamily: "Rubik",
-                  fontStyle: "normal",
-                  fontWeight: 400,
-                  fontSize: 14,
-                  color: "#362566",
-                }}
-                to="/example"
-              >
-                Partners
-              </Link>
-            </li>
-            <li
-              style={{
-                listStyle: "none",
-                textAlign: "left",
-              }}
-            >
-              <Link
-                style={{
-                  textDecoration: "none",
-                  fontFamily: "Rubik",
-                  fontStyle: "normal",
-                  fontWeight: 400,
-                  fontSize: 14,
-                  color: "#362566",
-                }}
-                to="/example"
-              >
-                Advertise with us
-              </Link>
-            </li>
-          </MDBCol>
-        </MDBRow>
-      </div>
-    </div>
+      <Grid
+        item
+        md={2}
+        className="mb-4 mb-md-0"
+        style={{
+          left: "50%",
+          // position: "absolute"
+        }}
+      >
+        <h5
+          style={{
+            fontFamily: "Rubik",
+            fontStyle: "normal",
+            fontWeight: "500%",
+            fontSize: 16,
+            color: "#362566",
+          }}
+        >
+          Support
+        </h5>
+        <li
+          style={{
+            listStyle: "none",
+            textAlign: "left",
+          }}
+        >
+          <Link
+            style={{
+              textDecoration: "none",
+              fontFamily: "Rubik",
+              fontStyle: "normal",
+              fontWeight: 400,
+              fontSize: 14,
+              color: "#362566",
+            }}
+            to="/example"
+          >
+            Contact Us
+          </Link>
+        </li>
+        <li
+          style={{
+            listStyle: "none",
+            textAlign: "left",
+          }}
+        >
+          <Link
+            style={{
+              textDecoration: "none",
+              fontFamily: "Rubik",
+              fontStyle: "normal",
+              fontWeight: 400,
+              fontSize: 14,
+              color: "#362566",
+            }}
+            to="/example"
+          >
+            FAQs
+          </Link>
+        </li>
+      </Grid>
+
+      <Grid
+        item
+        md={2}
+        className="socialmedia"
+        style={{
+          left: "63.75%",
+          // position: "absolute"
+        }}
+      >
+        <h5
+          style={{
+            fontFamily: "Rubik",
+            fontStyle: "normal",
+            fontWeight: "500%",
+            fontSize: 16,
+            color: "#362566",
+          }}
+        >
+          Social media
+        </h5>
+
+        <li
+          style={{
+            listStyle: "none",
+            textAlign: "left",
+          }}
+        >
+          <Link
+            style={{
+              textDecoration: "none",
+              fontFamily: "Rubik",
+              fontStyle: "normal",
+              fontWeight: 400,
+              fontSize: 14,
+              color: "#362566",
+            }}
+            to="/example"
+          >
+            Facebook
+          </Link>
+        </li>
+        <li
+          style={{
+            listStyle: "none",
+            textAlign: "left",
+          }}
+        >
+          <Link
+            style={{
+              textDecoration: "none",
+              fontFamily: "Rubik",
+              fontStyle: "normal",
+              fontWeight: 400,
+              fontSize: 14,
+              color: "#362566",
+            }}
+            to="/example"
+          >
+            Linkedin
+          </Link>
+        </li>
+        <li
+          style={{
+            listStyle: "none",
+            textAlign: "left",
+          }}
+        >
+          <Link
+            style={{
+              textDecoration: "none",
+              fontFamily: "Rubik",
+              fontStyle: "normal",
+              fontWeight: 400,
+              fontSize: 14,
+              color: "#362566",
+            }}
+            to="/example"
+          >
+            Instagram
+          </Link>
+        </li>
+        <li
+          style={{
+            listStyle: "none",
+            textAlign: "left",
+          }}
+        >
+          <Link
+            style={{
+              textDecoration: "none",
+              fontFamily: "Rubik",
+              fontStyle: "normal",
+              fontWeight: 400,
+              fontSize: 14,
+              color: "#362566",
+            }}
+            to="/example"
+          >
+            Twitter
+          </Link>
+        </li>
+        <li
+          style={{
+            listStyle: "none",
+            textAlign: "left",
+          }}
+        >
+          <Link
+            style={{
+              textDecoration: "none",
+              fontFamily: "Rubik",
+              fontStyle: "normal",
+              fontWeight: 400,
+              fontSize: 14,
+              color: "#362566",
+            }}
+            to="/example"
+          >
+            Youtube
+          </Link>
+        </li>
+      </Grid>
+      <Grid
+        style={{
+          left: "79.86%",
+          //position: "absolute"
+        }}
+      >
+        <h5
+          style={{
+            fontFamily: "Rubik",
+            fontStyle: "normal",
+            fontWeight: "500%",
+            fontSize: 16,
+            color: "#362566",
+          }}
+        >
+          More
+        </h5>
+
+        <li
+          style={{
+            listStyle: "none",
+            textAlign: "left",
+          }}
+        >
+          <Link
+            style={{
+              textDecoration: "none",
+              fontFamily: "Rubik",
+              fontStyle: "normal",
+              fontWeight: 400,
+              fontSize: 14,
+              color: "#362566",
+            }}
+            to="/example"
+          >
+            Airline fees
+          </Link>
+        </li>
+        <li
+          style={{
+            listStyle: "none",
+            textAlign: "left",
+          }}
+        >
+          <Link
+            style={{
+              textDecoration: "none",
+              fontFamily: "Rubik",
+              fontStyle: "normal",
+              fontWeight: 400,
+              fontSize: 14,
+              color: "#362566",
+            }}
+            to="/example"
+          >
+            Airlines
+          </Link>
+        </li>
+        <li
+          style={{
+            listStyle: "none",
+            textAlign: "left",
+          }}
+        >
+          <Link
+            style={{
+              textDecoration: "none",
+              fontFamily: "Rubik",
+              fontStyle: "normal",
+              fontWeight: 400,
+              fontSize: 14,
+              color: "#362566",
+            }}
+            to="/example"
+          >
+            Partners
+          </Link>
+        </li>
+        <li
+          style={{
+            listStyle: "none",
+            textAlign: "left",
+          }}
+        >
+          <Link
+            style={{
+              textDecoration: "none",
+              fontFamily: "Rubik",
+              fontStyle: "normal",
+              fontWeight: 400,
+              fontSize: 14,
+              color: "#362566",
+            }}
+            to="/example"
+          >
+            Advertise with us
+          </Link>
+        </li>
+      </Grid>
+    </Grid>
   );
 };
 
