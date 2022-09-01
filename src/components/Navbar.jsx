@@ -10,7 +10,7 @@ import {
   Grid,
 } from "@mui/material";
 import * as React from "react";
-
+import { orange } from "@mui/material/colors";
 const Navbar = (props) => {
   const [value, setValue] = React.useState(0);
   const [country, setCountry] = React.useState("");
@@ -24,7 +24,6 @@ const Navbar = (props) => {
 
   return (
     <nav
-      className="navbar navbar-expand-lg navbar-light bg-light w-100 "
       style={{
         height: "9%",
         boxShadow: "0px 2px 8px rgba(38, 36, 131, 0.05)",
@@ -34,7 +33,7 @@ const Navbar = (props) => {
         display: "flex",
       }}
     >
-      <Grid container sx={{ pt: 1 }}>
+      <Grid container sx={{ pt: 2 }}>
         <Grid item md={6} sm={6} href="/">
           <Typography
             style={{
@@ -51,25 +50,16 @@ const Navbar = (props) => {
           </Typography>
         </Grid>
 
-        <Grid
-          item
-          md={4}
-          sm={4}
-          className="tabs"
-          style={{
-            width: "100%",
-            height: "100%",
-          }}
-        >
+        <Grid item md={4} sm={4} className="tabs" style={{}}>
           <Tabs
             value={value}
             onChange={handlevalue}
             style={{
               height: "100%",
-              width: "100%",
-              // position: "absolute",
               color: "#FFC725",
             }}
+            indicatorColor={orange[500]}
+            sx={{ indicatorColor: orange[500] }}
           >
             <Tab
               style={{
@@ -79,7 +69,6 @@ const Navbar = (props) => {
                 color: "#362566",
                 fontSize: 16,
                 fontWeight: 400,
-                height: "70%",
               }}
               label="Flights"
             />
